@@ -12,7 +12,7 @@ class Orologio():
     cor5 = "#dedcdc"
     cor6 = "#3080f0"
     cor7 = "#f0f"
-    pyglet.font.add_file("digital-7.ttf")
+    pyglet.font.add_file("my-font.ttf")
     
     def __init__(self):
         self.root = tk.Tk()
@@ -20,9 +20,9 @@ class Orologio():
         self.root.geometry("450x180")
         self.root.configure(bg=self.cor1)
         self.root.resizable(False, False)
-        self.orologio = tk.Label(self.root, text="", font=("digital-7", 80), bg=self.cor1, fg=self.cor2)
+        self.orologio = tk.Label(self.root, text="", font=("my-font", 80), bg=self.cor1, fg=self.cor2)
         self.orologio.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
-        self.calendario = tk.Label(self.root, text="", font=("digital-7", 16), bg=self.cor1, fg=self.cor3)
+        self.calendario = tk.Label(self.root, text="", font=("my-font", 16), bg=self.cor1, fg=self.cor3)
         self.calendario.grid(row=1, column=0, columnspan=2, padx=10, pady=10)
         self.update_orologio()
         
